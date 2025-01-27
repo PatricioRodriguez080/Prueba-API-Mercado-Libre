@@ -1,6 +1,6 @@
-import "../index.css"
+import "../../index.css"
 import { Link } from "react-router-dom"
-import { Product } from "../Types/product"
+import { Product } from "../../Types/product"
 
 interface ProductCardProps {
     product: Product

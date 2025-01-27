@@ -1,6 +1,6 @@
 import { useParams } from "react-router-dom"
 import { useEffect } from "react"
-import { useFetchProductDetail } from "../Hooks/useFetchProductDetail"
+import { useFetchProductDetail } from "../../Hooks/useFetchProductDetail"
 
 const ProductDetail = () => {
     const { productId } = useParams<{ productId: string }>()

@@ -1,17 +1,14 @@
 import { useContext } from "react"
 import ProductList from "./ProductList"
-import { ProductContext } from "../Context/ProductContext"
+import { ProductContext } from "../../Context/ProductContext"
+import SkeletonProductList from "../Skeletons/SkeletonProductList/SkeletonProductList"
 
 const ProductListContainer = () => {
     const { products, loading } = useContext(ProductContext)
 
     return (
         <div>
-            {loading ? (
-                <h1 className="text-white">CARGANDO PRODUCTOS</h1>
-            ) : (
-                <ProductList products={products} />
-            )}
+            {loading ? <SkeletonProductList /> : <ProductList products={products} />}
         </div>
     )
 }
