@@ -18,7 +18,8 @@ export interface Category {
 }
 
 interface ProductContextProps {
-    products: Product[]
-    fetchProducts: (query: string) => void
+    products: Product[],
+    fetchProductsQuery: (query: string) => void,
+    fetchProductsCategory: (category: string) => void,
     loading: boolean
 }

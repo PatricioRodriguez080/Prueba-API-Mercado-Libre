@@ -4,11 +4,11 @@ import SearchBar from "./SearchBar"
 import { useNavigate } from "react-router-dom"
 
 const SearchBarContainer = () => {
-    const { fetchProducts } = useContext(ProductContext)
+    const { fetchProductsQuery } = useContext(ProductContext)
     const navigate = useNavigate()
 
     const handleSearch = (query: string) => {
-        fetchProducts(query)
+        fetchProductsQuery(query)
         navigate(`/search/${query}`)
     }
 
