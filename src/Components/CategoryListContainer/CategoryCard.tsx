@@ -7,7 +7,7 @@ interface CategoryCardProps {
 
 const CategoryCard = ({ categoria }: CategoryCardProps) => {
     return (
-        <Link to={`/${categoria.id}`}>
+        <Link to={`category/${categoria.id}`}>
             <div className="bg-gray-700 rounded-lg flex flex-col justify-center">
                 <img src={`/Images/${categoria.name}.webp`} className="max-h-56 object-cover rounded-md" alt={categoria.name} />
                 <h1 className="text-white text-xl text-center">{categoria.name}</h1>

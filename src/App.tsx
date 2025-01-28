@@ -15,7 +15,8 @@ function App() {
           <SearchBarContainer />
           <Routes>
             <Route path="/" element={<CategoryListContainer />} />
-            <Route path="/:category" element={<ProductListContainer />} />
+            <Route path="category/:category" element={<ProductListContainer />} />
+            <Route path="/search/:query" element={<ProductListContainer />} />
             <Route path="/:productId" element={<ProductDetail />} />
           </Routes>
         </div>

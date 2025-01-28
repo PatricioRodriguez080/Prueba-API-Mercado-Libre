@@ -5,12 +5,11 @@ import { useState, useEffect } from "react"
 import { Product } from "../../Types/product"
 
 const ProductListContainer = () => {
-    const { category } = useParams()
+    const { category, query } = useParams()
     const [products, setProducts] = useState<Product[]>([])
     const [loading, setLoading] = useState(true)
 
     const fetchProductsCategory = async (category: string | undefined) => {
-        if (!category) return
         try {
             const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?category=${category}`)
             if (!response.ok) {
@@ -25,10 +24,28 @@ const ProductListContainer = () => {
         }
     }
 
+    const fetchProductsQuery = async (query: string) => {
+        try {
+            const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`)
+            if (!response.ok) {
+                throw new Error("Error al buscar productos")
+            }
+            const data = await response.json()
+            setProducts(data.results)
+            setLoading(false)
+        } catch (err) {
+            console.error("Error al llamar productos", err)
+        }
+    }
+
     useEffect(() => {
         setLoading(true)
-        fetchProductsCategory(category)
-    }, [category])
+        if (category) {
+            fetchProductsCategory(category)
+        } else if (query) {
+            fetchProductsQuery(query)
+        }
+    }, [category, query])
 
     return (
         <div>
