@@ -1,4 +1,4 @@
-import { createContext, ReactNode, useEffect, useState } from "react"
+import { createContext, ReactNode, useState } from "react"
 import { Product, ProductContextProps } from "../Types/product"
 
 export const ProductContext = createContext<ProductContextProps>({
@@ -12,23 +12,6 @@ export const ProductContext = createContext<ProductContextProps>({
 const ProductContextProvider = ({ children }: { children: ReactNode }) => {
     const [products, setProducts] = useState<Product[]>([])
     const [loading, setLoading] = useState(true)
-
-    useEffect(() => {
-        const fetchInitialProducts = async () => {
-            try {
-                const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=monitor`)
-                if (!response.ok) {
-                    throw new Error("Error al buscar productos iniciales")
-                }
-                const data = await response.json()
-                setProducts(data.results.slice(0, 12))
-                setLoading(false)
-            } catch (err) {
-                console.error("Error al cargar los productos iniciales", err)
-            }
-        }
-        fetchInitialProducts()
-    }, [])
 
     const fetchProducts = async (query: string) => {
         try {

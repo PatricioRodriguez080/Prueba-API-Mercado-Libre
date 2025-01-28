@@ -3,8 +3,8 @@ import ProductContextProvider from "./Context/ProductContext"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import ProductDetail from "./Components/ProductListContainer/ProductDetail"
 import SearchBarContainer from "./Components/SearchBarContainer/SearchBarContainer"
-import ProductListContainer from "./Components/ProductListContainer/ProductListContainer"
 import CategoryListContainer from "./Components/CategoryListContainer/CategoryListContainer"
+import ProductListContainer from "./Components/ProductListContainer/ProductListContainer"
 
 function App() {
   return (
@@ -15,6 +15,7 @@ function App() {
           <SearchBarContainer />
           <Routes>
             <Route path="/" element={<CategoryListContainer />} />
+            <Route path="/:category" element={<ProductListContainer />} />
             <Route path="/:productId" element={<ProductDetail />} />
           </Routes>
         </div>

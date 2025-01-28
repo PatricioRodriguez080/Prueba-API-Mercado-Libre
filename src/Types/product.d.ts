@@ -13,11 +13,12 @@ export interface ProductDetail extends Product {
 }
 
 export interface Category {
-    name: string;
+    id: string,
+    name: string
 }
 
 interface ProductContextProps {
-    products: Product[];
-    fetchProducts: (query: string) => void;
+    products: Product[]
+    fetchProducts: (query: string) => void
     loading: boolean
 }

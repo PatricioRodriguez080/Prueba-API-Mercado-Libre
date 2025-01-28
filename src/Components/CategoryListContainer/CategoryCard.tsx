@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { Category } from "../../Types/product"
 
 interface CategoryCardProps {
@@ -6,10 +7,12 @@ interface CategoryCardProps {
 
 const CategoryCard = ({ categoria }: CategoryCardProps) => {
     return (
-        <div className="bg-gray-700 rounded-lg flex flex-col justify-center">
-            <img src={`/Images/${categoria.name}.webp`} className="max-h-56 object-cover rounded-md" alt={categoria.name} />
-            <h1 className="text-white text-xl text-center">{categoria.name}</h1>
-        </div>
+        <Link to={`/${categoria.id}`}>
+            <div className="bg-gray-700 rounded-lg flex flex-col justify-center">
+                <img src={`/Images/${categoria.name}.webp`} className="max-h-56 object-cover rounded-md" alt={categoria.name} />
+                <h1 className="text-white text-xl text-center">{categoria.name}</h1>
+            </div>
+        </Link>
     )
 }
 
