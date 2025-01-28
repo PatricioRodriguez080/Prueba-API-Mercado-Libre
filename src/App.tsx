@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"
 import ProductDetail from "./Components/ProductListContainer/ProductDetail"
 import SearchBarContainer from "./Components/SearchBarContainer/SearchBarContainer"
 import ProductListContainer from "./Components/ProductListContainer/ProductListContainer"
+import CategoryListContainer from "./Components/CategoryListContainer/CategoryListContainer"
 
 function App() {
   return (
@@ -13,7 +14,7 @@ function App() {
           <h1 className="flex justify-center text-2xl text-white">Busqueda de productos</h1>
           <SearchBarContainer />
           <Routes>
-            <Route path="/" element={<ProductListContainer />} />
+            <Route path="/" element={<CategoryListContainer />} />
             <Route path="/:productId" element={<ProductDetail />} />
           </Routes>
         </div>
