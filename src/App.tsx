@@ -7,18 +7,18 @@ import ProductListContainer from "./Components/ProductListContainer/ProductListC
 
 function App() {
   return (
-    <ProductContextProvider>
-      <div className="bg-gray-900 p-10">
-        <h1 className="flex justify-center text-2xl text-white">Busqueda de productos</h1>
-        <SearchBarContainer />
-        <BrowserRouter>
+    <BrowserRouter>
+      <ProductContextProvider>
+        <div className="bg-gray-900 p-10">
+          <h1 className="flex justify-center text-2xl text-white">Busqueda de productos</h1>
+          <SearchBarContainer />
           <Routes>
             <Route path="/" element={<ProductListContainer />} />
             <Route path="/:productId" element={<ProductDetail />} />
           </Routes>
-        </BrowserRouter>
-      </div >
-    </ProductContextProvider>
+        </div>
+      </ProductContextProvider>
+    </BrowserRouter>
   )
 }
 
