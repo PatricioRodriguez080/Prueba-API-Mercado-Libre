@@ -9,7 +9,7 @@ const CategoryList = ({ categorias }: CategoryListProps) => {
     return (
         <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-4">
             {categorias.map((categoria) => (
-                <CategoryCard categoria={categoria} />
+                <CategoryCard categoria={categoria} key={categoria.id} />
             ))}
         </div>
     )
