@@ -12,6 +12,10 @@ export interface ProductDetail extends Product {
     description: string
 }
 
+export interface Category {
+    name: string;
+}
+
 interface ProductContextProps {
     products: Product[];
     fetchProducts: (query: string) => void;
