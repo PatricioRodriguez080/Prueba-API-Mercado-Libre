@@ -5,13 +5,14 @@ import ProductDetail from "./Components/ProductListContainer/ProductDetail"
 import SearchBarContainer from "./Components/SearchBarContainer/SearchBarContainer"
 import CategoryListContainer from "./Components/CategoryListContainer/CategoryListContainer"
 import ProductListContainer from "./Components/ProductListContainer/ProductListContainer"
+import Titulo from "./Components/Titulo/Titulo"
 
 function App() {
   return (
     <BrowserRouter>
       <ProductContextProvider>
         <div className="bg-gray-900 p-10">
-          <h1 className="flex justify-center text-2xl text-white">Busqueda de productos</h1>
+          <Titulo />
           <SearchBarContainer />
           <Routes>
             <Route path="/" element={<CategoryListContainer />} />
