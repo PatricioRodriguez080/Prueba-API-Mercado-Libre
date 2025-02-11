@@ -20,7 +20,7 @@ const SearchBar = ({ onSearch }: SerchBarProps) => {
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
             />
-            <button onClick={handleSearch} className="bg-gray-700 rounded-lg text-white cursor-pointer p-2.5">Buscar</button>
+            <button onClick={handleSearch} className="bg-gray-700 rounded-lg text-white cursor-pointer p-2.5 ml-1.5">Buscar</button>
         </div>
     )
 }

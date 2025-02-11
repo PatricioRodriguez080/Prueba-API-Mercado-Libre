@@ -11,7 +11,7 @@ function App() {
   return (
     <BrowserRouter>
       <ProductContextProvider>
-        <div className="bg-gray-900 p-10">
+        <div className="bg-gray-900 p-10 min-h-screen w-full">
           <Titulo />
           <SearchBarContainer />
           <Routes>
