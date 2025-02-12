@@ -18,6 +18,7 @@ const ProductContextProvider = ({ children }: { children: ReactNode }) => {
 
     const fetchProductsQuery = async (query: string) => {
         try {
+            setLoading(true)
             const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?q=${query}`)
             if (!response.ok) {
                 throw new Error("Error al buscar productos")
@@ -33,6 +34,7 @@ const ProductContextProvider = ({ children }: { children: ReactNode }) => {
 
     const fetchProductsCategory = async (category: string) => {
         try {
+            setLoading(true)
             const response = await fetch(`https://api.mercadolibre.com/sites/MLA/search?category=${category}`)
             if (!response.ok) {
                 throw new Error("Error al buscar productos")

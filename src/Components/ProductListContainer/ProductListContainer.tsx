@@ -14,7 +14,7 @@ const ProductListContainer = () => {
         } else if (query) {
             fetchProductsQuery(query)
         }
-    }, [category, query, fetchProductsCategory, fetchProductsQuery])
+    }, [category, query])
 
     return (
         <div>
