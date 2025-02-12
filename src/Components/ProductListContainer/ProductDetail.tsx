@@ -11,18 +11,29 @@ const ProductDetail = () => {
     }, [productId])
 
     return (
-        <div className="bg-gray-700 rounded-lg mt-4">
-            <div className="flex flex-col lg:flex-row">
-                <div className="flex justify-center p-4 rounded-lg lg:p-0">
-                    <img src={product?.thumbnail} className="w-full sm:w-80 md:w-96 h-80 rounded-lg object-cover" alt={product?.title} />                    {/* va ? porque me aseguro de no intentar acceder a una propiedad nula */}
+        <div className="bg-gray-700 rounded-lg p-4 mt-4">
+            <div className="flex flex-col items-center lg:flex-row">
+                <div className="flex justify-center p-4 lg:w-1/4">
+                    <img
+                        src={product?.thumbnail}
+                        className="object-cover w-60 h-60 rounded-lg"
+                        alt={product?.title}
+                    />
                 </div>
-                <div className="p-4">
-                    <div>
-                        <h5 className="text-white text-xl font-bold">{product?.title}</h5>
-                        <p className="font-normal text-gray-300">${product?.price}</p>
-                        <p><small>{product?.description}</small></p>
-                        <p><small>{product?.avaliableQuantity}</small></p>
-                    </div>
+
+                <div className="p-4 text-center lg:text-left lg:w-2/4 lg:py-4 lg:pl-0">
+                    <h5 className="text-xl font-bold text-white">{product?.title}</h5>
+                    <p className="font-normal text-gray-300">
+                        {new Intl.NumberFormat("es-AR", { style: "currency", currency: "ARS" }).format(product?.price ?? 0)}
+                    </p>
+                    <a
+                        href={product?.permalink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-block bg-blue-700 hover:bg-blue-800 text-white rounded-lg px-4 py-2 mt-4"
+                    >
+                        Ver Producto ML
+                    </a>
                 </div>
             </div>
         </div>
