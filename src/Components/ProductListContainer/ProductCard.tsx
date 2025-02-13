@@ -8,7 +8,7 @@ interface ProductCardProps {
 
 const ProductCard = ({ product }: ProductCardProps) => {
     return (
-        <div className="bg-gray-700 rounded-lg p-4 mt-4">
+        <div className="bg-gray-700 hover:bg-gray-500 rounded-lg p-4 mt-4">
             <Link to={`/${product.id}`} style={{ textDecoration: "none" }}>
                 <div className="flex flex-col items-center lg:flex-row">
                     <div className="flex justify-center p-4 lg:w-1/3">
