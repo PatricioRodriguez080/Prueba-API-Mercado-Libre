@@ -6,10 +6,19 @@ export interface Product {
     permalink: string
 }
 
+interface Attribute {
+    id: string
+    name: string
+    value_name: string | null
+}
+
 export interface ProductDetail extends Product {
     avaliableQuantity: number,
     soldQuantity: number,
-    description: string
+    description: string,
+    condition: string,
+    warranty: string,
+    attributes: Attribute[]
 }
 
 export interface Category {

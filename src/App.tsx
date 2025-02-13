@@ -1,7 +1,7 @@
 import "./index.css"
 import ProductContextProvider from "./Context/ProductContext"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
-import ProductDetail from "./Components/ProductListContainer/ProductDetail"
+import ProductDetail from "./Components/ProductListContainer/ProductDetailContainer"
 import SearchBarContainer from "./Components/SearchBarContainer/SearchBarContainer"
 import CategoryListContainer from "./Components/CategoryListContainer/CategoryListContainer"
 import ProductListContainer from "./Components/ProductListContainer/ProductListContainer"
