@@ -15,12 +15,7 @@ const ProductDetailContainer = () => {
     }, [productId])
 
     return (
-        loading ? (
-            <SkeletonProductDetail />
-        ) : (
-            <ProductDetailComponent product={product!} />
-        )
-
+        loading ? <SkeletonProductDetail /> : <ProductDetailComponent product={product!} />
     )
 }
 
