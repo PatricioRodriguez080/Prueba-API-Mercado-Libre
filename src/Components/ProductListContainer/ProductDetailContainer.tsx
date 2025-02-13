@@ -1,6 +1,7 @@
 import { useParams } from "react-router-dom"
 import { useEffect } from "react"
 import { useFetchProductDetail } from "../../Hooks/useFetchProductDetail"
+import SkeletonProductDetail from "../Skeletons/SkeletonProductDetail/SkeletonProductDetail"
 import ProductDetailComponent from "./ProductDetailComponent"
 
 const ProductDetailContainer = () => {
@@ -15,7 +16,7 @@ const ProductDetailContainer = () => {
 
     return (
         loading ? (
-            <h2>cargando</h2>
+            <SkeletonProductDetail />
         ) : (
             <ProductDetailComponent product={product!} />
         )
