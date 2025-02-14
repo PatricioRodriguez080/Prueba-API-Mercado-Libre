@@ -16,6 +16,6 @@ Este es mi primer proyecto consumiendo la API de Mercado Libre y utilizando Type
 - Enlace directo a la publicación en Mercado Libre.  
 
 ## 📸 Imagenes del proyecto
-![Página principal](public/images/Readme1.png)
-![Productos por categoria](public/images/Readme2.png)
-![Detalles de producto](public/images/Readme3.png)
+![Página principal](public/Images/Readme1.png)
+![Productos por categoria](public/Images/Readme2.png)
+![Detalles de producto](public/Images/Readme3.png)
