@@ -10,7 +10,7 @@ Este es mi primer proyecto consumiendo la API de Mercado Libre y utilizando Type
 ![TailwindCSS](https://img.shields.io/badge/TailwindCSS-%2306B6D4?logo=tailwindcss&labelColor=white)
 ![React Router](https://img.shields.io/badge/React%20Router-%23CA4245?logo=reactrouter&labelColor=white)  
 
-## Funcionalidades
+## 🔨 Funcionalidades
 - Búsqueda de productos por nombre y categoría.  
 - Visualización de detalles de cada producto.  
 - Enlace directo a la publicación en Mercado Libre.  
@@ -19,3 +19,6 @@ Este es mi primer proyecto consumiendo la API de Mercado Libre y utilizando Type
 ![Página principal](public/Images/Readme1.png)
 ![Productos por categoria](public/Images/Readme2.png)
 ![Detalles de producto](public/Images/Readme3.png)
+
+## ❔ Donde puedo ver el proyecto?
+Puedes ver el proyecto en: [Buscador de productos](https://prueba-api-mercado-libre.vercel.app/)
